@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css" type="text/css">
+    <title>Document</title>
+    <style>
+        
+        body {
+            margin-top: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 50px;
+            margin-right: auto;
+            background-color: rgb(235, 229, 236);
+            background-image: url(images/pattern.png);
+        }
+        #mheader {
+            background-color: rgb(199, 160, 235);
+            border-radius: 25px;
+        }
+
+        header>nav>div {
+            font-size: x-large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-weight: 400;
+            padding: 5px;
+            color: rgb(117, 15, 112);
+        }
+        nav {
+            height: 60px;
+            width: 1000px;
+            margin: 0 auto 20px;}
+
+        .authentication{
+        float: right;
+        padding: 1px 2px;
+    }
+        table,
+        #tyrion {
+        border:1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+        margin-left: 50px;
+    }
+
+    form{
+        margin-top: 50px;
+    } 
+
+    input {
+        border-radius: 5px;
+        padding: 2px;
+    }
+    </style>
+</head>
+<body>
+    <header id="mheader">
+        <nav>
+            <div>KAY-library</div>
+        </nav>
+    </header>
+    <main>
+        <aside><img src="" alt="KAY-library logo" srcset=""></aside>
+        <form action="signup.html" method="post">
+            <p>
+                <label for="Username">*Username</label>
+                <input type="text" required name="Client-name" id="Username">
+            </p>
+            <p>
+                <label for="BirthDate"> Date of Birth</label>
+                <input type="date" pattern="\(\d{3}\) \d{3}-\d{4}" name="BirthDate" id="BirthDate">
+            </p>
+            <p>
+                <label for="Email">Email</label>
+                <input type="text" name="Email-address" id="Email">
+            </p>
+            <p>
+                <label for="Phone">Telephone</label>
+                <input type="number"  name="Telephone"  id="Phone">
+            </p>
+            <input type="submit" value="SignUp">
+        </form>
+    </main>
+</body>
+</html>
