@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="site.css" type="text/css">
     <title>Kate's Book App</title>
     <style>
         body {
@@ -13,7 +13,6 @@
             margin-left: 50px;
             margin-right: auto;
             background-color: rgb(235, 229, 236);
-            background-image: url(images/pattern.png);
         }
         #mheader {
             background-color: rgb(199, 160, 235);
@@ -32,19 +31,34 @@
             width: 1000px;
             margin: 0 auto 20px;}
 
-        .authentication{
-        float: right;
-        padding: 1px 2px;
-    }
+      
         table,
         #tyrion {
-        border:1px solid black;
+        border:1px solid rgb(139, 38, 38);
         border-collapse: collapse;
         padding: 5px;
-        margin-left: 50px;
+        margin: 5px 50px 50px 10px;
+        width: 50%;
     }
     
     </style>
+<script>
+     function save(){
+            localStorage.setItem("jaime",true);
+        }
+
+        window.onload = function(){
+            var favorite = document.getElementById('favorite');
+            if(window.localStorage)
+            {
+                var storage = window.localStorage;
+                if(storage.getItem('jaime')== 'true')
+                {
+                    favorite.innerHTML = "Add a star";
+                }
+            }
+        }
+</script>
     
 </head>
 <body>
@@ -57,7 +71,8 @@
             </div>
         </nav>
     </header>
-    <input type="search"  placeholder="type author or title">
+    <main>
+        <aside><input type="search"  placeholder="type author or title"></aside>
     <table >
         <tr id="tyrion">
             <tr >
@@ -78,7 +93,10 @@
                 <td>File: <b>EPUB</b></td>
             </tr>
             <tr>
-                <td>Stars</td>
+                <td>
+                    <button onclick="save()" type="button"> Add Favorite</button>
+                    <span id="favorite"></span>
+                </td>
             </tr>
             <tr>
                 <td>Best selling author!</td>
@@ -161,6 +179,23 @@
         </tr>
         
     </table>
+
+    <form action="booksite.html" method="post" id="review" enctype="application/x-www-form-urlencoded"></form>
+    <fieldset >
+        <legend>Review</legend>
+        <textarea name="feedback" id="" cols="30" rows="10">Write something here...</textarea>
+        <br>
+        Accessed book by:
+        <select name="selection" id="" multiple size="2"> 
+            <option value="option1">Online</option>
+            <option value="option2">Bookstore</option>
+        </select>
+        <p>
+            <button><a href="mailto:bethanys@yahoo.com">SendReview</a></button>
+        </p>
+    </fieldset>
+    
+    </main>
     
 </body>
 </html>

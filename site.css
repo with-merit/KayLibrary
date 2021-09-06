@@ -22,17 +22,21 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: gray;
+    
     padding: 10px;
    
 }
 
+.authentication{
+    float: right;
+    padding: 1px 2px;
+}
+
 main{
     display:block; /* takes up entire width*/
-    margin: 0.5em 0 0.5em 0.5em;
+    margin: 80px 10px 10px 10px;
     padding-top: 3em;
     padding-bottom: 3em;
-    min-height: 85%;
 }
 p{
     margin: 0.5em 0 0.5em 0;
@@ -70,16 +74,6 @@ a:visited{
    
 }
 
-.info{
-    width: 80%;
-    background-color: rgb(182, 176, 176);
-}
-
-.info p{
-    padding: 0.5em;
-    
-}
-
 input[type="email"],
 input[type="phone"],
 textarea {
@@ -102,3 +96,14 @@ input:required,
 textarea:required{
     border-style: dashed   ;
 }
+
+fieldset {
+    border-color: hsl(hue, saturation, lightness);
+    border-width: 3px;
+    border-style: solid;
+}
+
+fieldset > legend{
+    color: grey;
+}
+
