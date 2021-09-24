@@ -51,6 +51,9 @@ p{
     }
 }*/
 
+table>tr img {
+    margin:2 px ;
+}
 label{
     display: block;
     font-weight: bold;
