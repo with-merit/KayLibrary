@@ -24,19 +24,6 @@
             background-color: rgb(136, 89, 180)!important;
         }
 
-       /* header>nav>div {
-            font-size: x-large;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            font-weight: 400;
-            padding: 5px;
-            color: rgb(117, 15, 112);
-        }
-        nav {
-            height: 60px;
-            width: 1000px;
-            margin: 0 auto 20px;}*/
-
-      
         table,
         #tyrion {
         border:1px solid rgb(139, 38, 38);
@@ -59,24 +46,11 @@
                 var storage = window.localStorage;
                 if(storage.getItem('jaime')== 'true')
                 {
-                    favorite.innerHTML = "Add a star";
+                    favorite.innerHTML = "$hearts";
                 }
             }
         }
 
-        /* getting image api*/
-        let btn = document.getElementById('btnClick')
-        let image = document.getElementById('image')
-
-        btn.addEventListener('click', function() {
-            fetch("https://dog.ceo/api/breeds/image/random")
-            .then(res =>res.json())
-            .then(result => {
-                console.log(result)
-                image.src = result.message
-            })
-            .catch(err=>console.log(err))
-        })
 </script>
     
 </head>
@@ -139,12 +113,12 @@
     <table >
         <tr id="tyrion">
             <tr >
-                <td rowspan="7"><img src="images/applepie.jpg" width="150" height="100"></td>
+                <td rowspan="7"><img src="images/ifuask.jpeg" width="150" height=""></td>
                 <td><a href="">It Ends With Us</a></td>
                 
             </tr>
             <tr>
-                <td style="color: blue;"> Colleen Hoover</td>
+                <td style="color: blue;"> Sylvia Day</td>
             </tr>
             <tr>
                 <td>Year: <b>2016</b></td>
@@ -167,12 +141,12 @@
         </tr>
         <tr id="tyrion">
             <tr >
-                <td rowspan="7"><img src="images/blueberrycheesecakesmall.jpg" width="150" height="100"></td>
-                <td><a href="">Purple Hibiscus</a></td>
+                <td rowspan="7"><img src="images/wives.jpg" width="150" height=""></td>
+                <td><a href="">The Wives</a></td>
                 
             </tr>
             <tr>
-                <td style="color: blue;"> Chimamanda Ngozi Adichie</td>
+                <td style="color: blue;"> Tarryn Fisher</td>
             </tr>
             <tr>
                 <td>Year: <b>2016</b></td>
@@ -192,8 +166,8 @@
         </tr>
         <tr id="tyrion">
             <tr>
-                <td rowspan="7"><img src="images/applepie.jpg" width="150" height="100"></td>
-                <td><a href="">Butter Fly</a></td>
+                <td rowspan="7"><img src="images/never (2).jpg" width="150" height=""></td>
+                <td><a href="">Never Never</a></td>
                 
             </tr>
             <tr>
@@ -218,8 +192,8 @@
         </tr>
         <tr>
             <tr id="tyrion">
-                <td rowspan="7" style="padding-right: 6px;"><img src="images/cranberrypiesmall.jpg" width="150" height="100"></td>
-                <td><a href="">Butter Fly</a></td>
+                <td rowspan="7" style="padding-right: 6px;"><img src="images/wrongfam.jpg" width="150" height=""></td>
+                <td><a href="">The Wrong Family</a></td>
             </tr>
             <tr>
                 <td style="color: blue;">Tarryn Fisher</td>
@@ -257,8 +231,11 @@
             <button><a href="mailto:bethanys@yahoo.com">SendReview</a></button>
         </p>
          
-        <button id="btnClick">Previous Reviews</button>
+        <button id="btnClick">See Image</button>
         <img id="image" >
+
+
+
     </fieldset>
     
     </main>
@@ -267,5 +244,18 @@
     integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=
     " crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        /* getting image api*/
+        let btn = document.querySelector('button')
+        let image = document.querySelector('img')
+    
+        btn.addEventListener('click', function() {
+            fetch('https://picsum.photos/200/300')
+            .then(res =>res.json())
+            .then(result => image.src = result.message)
+            .catch(err=>console.log(err))
+        })
+    </script>
 </body>
+
 </html>
